@@ -1,0 +1,40 @@
+.wrapper {
+  margin-top: 70px;
+  margin-bottom: 60px;
+  background-color: white;
+  color: black;
+  box-shadow: 5px 10px 20px black;
+	box-shadow: 5px 10px 20px black;
+  max-width: 60vw;
+  display: grid;
+  justify-items: center;
+  margin-left: 310px;
+}
+
+.single-image {
+  width: 60vw;
+  height: 300px;
+  object-fit: cover;
+}
+
+table {
+  width: 150%;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+
+
+.text-wrapper {
+  padding: 10px;
+  height: 200px;
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+.text-wrapper h1 {
+  margin: 0;
+}
