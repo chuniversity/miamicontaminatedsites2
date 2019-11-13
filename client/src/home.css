@@ -50,6 +50,7 @@ body{
 	z-index:2;
 	display: grid;
 	place-items: center;
+	margin-top: 50px;
 	margin-bottom: 100px;
 	z-index:2;
 }
@@ -67,7 +68,7 @@ body{
 	color: whitesmoke;
 	text-shadow: 2px 2px 4px black;
 	font-family: 'Poppins', sans-serif;
-	font-size: 1.2rem;
+	font-size: calc(.5em + 1.3vw);
 	max-width: 900px;
 	margin: 20px;
 	text-align: center;
