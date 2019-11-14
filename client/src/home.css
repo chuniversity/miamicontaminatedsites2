@@ -126,17 +126,23 @@ video {
 .search-box {
 	width: 100%;
 	display: grid;
-	grid-template-columns: 2fr 8fr 2fr;
+	grid-template-columns: 2fr 5fr 2fr;
 }
 
-.search-1 {
-
+@media only screen and (max-width: 600px) {
+	.search-box {
+		grid-template-columns: 2fr 7fr 2fr;
+	}
 }
-.search-2 {
-
+@media only screen and (max-width: 500px) {
+	.search-box {
+		grid-template-columns: 2fr 10fr 2fr;
+	}
 }
-.search-2 {
-
+@media only screen and (max-width: 400px) {
+	.search-box {
+		grid-template-columns: 2fr 18fr 2fr;
+	}
 }
 
 /* Optional - turn off bg overlay on mobile */
