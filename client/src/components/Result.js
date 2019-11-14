@@ -12,7 +12,7 @@ const Result = (props) => {
 				<div id="totalResultsDiv">
 					<h1 className="totalResults">Showing {filteredResults.length} of {props.sites.length} results for {props.permitText}</h1>
 				</div>
-				<div id="filtersDiv">
+				<div className="filter-rad">
 					<label htmlFor="radius-dropbox">Radius:</label>
 					<select
 						id="radius-dropbox"
@@ -23,6 +23,8 @@ const Result = (props) => {
 						<option value="2">2 Miles</option>
 						<option value="3">3 Miles</option>
 					</select>
+					</div>
+					<div className="filter-con">
 					<label htmlFor="permit">Type of contamination:</label>
 					<select
 						id="permit"
