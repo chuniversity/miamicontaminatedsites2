@@ -4,7 +4,8 @@
   grid-gap: 40px;
   padding-left: 20vw;
 	padding-right: 20vw;
-	place-items: center;
+  place-items: center;
+  margin-bottom: 20px;
 }
 .inner-wrapper {
   background-color: white;

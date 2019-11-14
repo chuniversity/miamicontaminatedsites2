@@ -46,45 +46,45 @@ class SingleResult extends React.Component {
       <div className="wrapper">
       <div>
         <img className="single-image" src={`https://maps.googleapis.com/maps/api/streetview?size=800x800&location=${site.HNUM}+${site.ST_NAME}+${site.PRE_DIR}+${site.ST_TYPE}+MIAMI+FL&heading=271&pitch=-0.76&key=AIzaSyDLun1DYQxp9IawieGnpd-4d0Jrp8sZSHU`} alt="contaminated site" />
-        </div>
-        <div className="text-wrapper">
-          <h1>{site.HNUM} {site.PRE_DIR} {site.ST_NAME} {site.ST_TYPE}</h1>
-            <table>
-              <tbody>
-              <tr>
-                <td>Address:</td>
-                <td>{site.HNUM} {site.PRE_DIR} {site.ST_NAME} {site.ST_TYPE}</td>
-              </tr>
-              <tr>
-                <td>Task Name:</td>
-                <td>{site.TASK_NAME}</td>
-              </tr>
-              <tr>
-                <td>Folio:</td>
-                <td>{site.FOLIO}</td>
-              </tr>
-              <tr>
-                <td>Status:</td>
-                <td>{site.CLASSIFCTN}</td>
-              </tr>
-              <tr>
-                <td>Phase:</td>
-                <td>{site.PHASE}</td>
-              </tr>
-              <tr>
-                <td>Permit No:</td>
-                <td>{site.PERMITNO}</td>
-              </tr>
-              <tr>
-                <td>Permit Type:</td>
-                <td>{permit}</td>
-              </tr>
-              <tr>
-                <td>File No:</td>
-                <td>{site.FILENO}</td>
-              </tr>
-              </tbody>
-            </table>
+      </div>
+      <div className="single-text-wrapper">
+        <h1>{site.HNUM} {site.PRE_DIR} {site.ST_NAME} {site.ST_TYPE}</h1>
+          <table>
+            <tbody>
+            <tr>
+              <td>Address:</td>
+              <td>{site.HNUM} {site.PRE_DIR} {site.ST_NAME} {site.ST_TYPE}</td>
+            </tr>
+            <tr>
+              <td>Task Name:</td>
+              <td>{site.TASK_NAME}</td>
+            </tr>
+            <tr>
+              <td>Folio:</td>
+              <td>{site.FOLIO}</td>
+            </tr>
+            <tr>
+              <td>Status:</td>
+              <td>{site.CLASSIFCTN}</td>
+            </tr>
+            <tr>
+              <td>Phase:</td>
+              <td>{site.PHASE}</td>
+            </tr>
+            <tr>
+              <td>Permit No:</td>
+              <td>{site.PERMITNO}</td>
+            </tr>
+            <tr>
+              <td>Permit Type:</td>
+              <td>{permit}</td>
+            </tr>
+            <tr>
+              <td>File No:</td>
+              <td>{site.FILENO}</td>
+            </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </>

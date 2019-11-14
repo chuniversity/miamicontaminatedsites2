@@ -1,14 +1,15 @@
 .wrapper {
-  margin-top: 70px;
-  margin-bottom: 60px;
+  display:flex;
+  flex-direction: column;
+  margin: 70px auto 60px auto;
   background-color: white;
   color: black;
-  box-shadow: 5px 10px 20px black;
-	box-shadow: 5px 10px 20px black;
   max-width: 60vw;
-  display: grid;
-  justify-items: center;
-  margin-left: 310px;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
 }
 
 .single-image {
@@ -21,14 +22,31 @@ table {
   width: 150%;
   margin-left: 0px;
   margin-right: 0px;
+  table-align: left;
 }
 
 
-
-.text-wrapper {
+.single-text-wrapper {
   padding: 10px;
-  height: 200px;
+  min-height: 400px;
   font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  object-fit: cover;
+  overflow-wrap: break-word;
+  
+}
+
+@media only screen and (max-width: 500px) {
+  .single-text-wrapper {
+    font-size: .8rem;
+
+  }
+}
+@media only screen and (min-width: 500px) {
+  .wrapper {
+    box-shadow: 5px 10px 20px black;
+    box-shadow: 5px 10px 20px black;
+  }
 }
 
 h1 {
