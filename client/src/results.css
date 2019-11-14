@@ -46,7 +46,7 @@ select option:hover{
 }
 
 
-
+/* Full Size Display */
 
 @media only screen and (min-width: 1480px)  {
   .results-filters {
@@ -84,6 +84,8 @@ select option:hover{
     font-size: 1.1rem;
   }
 }
+
+/* Mobile Display */
 @media only screen and (max-width: 1480px) {
   .results-filters {
     display: flex;
@@ -110,7 +112,7 @@ select option:hover{
   }
   label {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.1rem;
+    font-size: .8rem;
     margin-right: 5px;
     padding-left: 10px;
     text-align: left;
@@ -119,7 +121,7 @@ select option:hover{
     max-width: 200px;
     border: none;
     background-color: white;
-    font-size: 1.1rem;
+    font-size: .8rem;
   }
   .filter-con {
     text-align: center;
@@ -131,28 +133,50 @@ select option:hover{
     padding-bottom: 2px;
   }
   label {
-    /* display:block;
-    vertical-align: top; */
-  }
-}
-
-
-
-
-@media only screen and (max-width: 1480px) {
-  .totalResults {
-    font-size: .8rem;
-  }
-  label {
-    font-size: .8rem;
-  }
-  select {
     font-size: .8rem;
   }
 }
 
-@media only screen and (min-width: 700px) {
+/* Additional Display */
+@media only screen and (min-width: 1000px) {
   .totalResults {
     font-size: 1.1rem;
+  }
+  label {
+    font-size: 1.1rem;
+  }
+  select {
+    font-size: 1.1rem;
+  }
+}
+
+/* Mobile Margins */
+@media only screen and (max-width: 500px) {
+  .results-filters {
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
+}
+
+/* Wrapper Mobile */
+@media only screen and (max-width: 700px) {
+  .outer-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-gap: 40px;
+    padding-left: 20vw;
+    padding-right: 20vw;
+    place-items: center;
+  }
+  .inner-wrapper {
+    background-color: white;
+    color: black;
+    box-shadow: 5px 10px 20px black;
+    box-shadow: 5px 10px 20px black;
+    max-width: 400px;
+  }
+  .text-wrapper {
+    font-size: .6rem;
+    min-height: 100px;
   }
 }
