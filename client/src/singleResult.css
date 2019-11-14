@@ -10,6 +10,8 @@
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: auto;
+  box-shadow: 5px 10px 20px black;
+  box-shadow: 5px 10px 20px black;
 }
 
 .single-image {
@@ -19,10 +21,16 @@
 }
 
 table {
-  width: 150%;
+  width: 100%;
   margin-left: 0px;
   margin-right: 0px;
-  table-align: left;
+  table-layout: fixed;
+  width: 100%;
+  word-wrap: break-word;
+  display: block;
+  border-collapse: separate;
+  border-spacing: 50px 0;
+
 }
 
 
@@ -40,12 +48,6 @@ table {
   .single-text-wrapper {
     font-size: .8rem;
 
-  }
-}
-@media only screen and (min-width: 500px) {
-  .wrapper {
-    box-shadow: 5px 10px 20px black;
-    box-shadow: 5px 10px 20px black;
   }
 }
 
