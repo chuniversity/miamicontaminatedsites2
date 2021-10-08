@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom'
 
 const Result = (props) => {
 	const filteredResults = props.sites.filter(site => {
-	if (props.permit === 'all') return true
-		else return site.attributes.PERMITTYPE === props.permit
-	})
+		let cleaned = site.attributes.PERMITTYPE.split(' ').join(''); // fix spacing error in api
+	if (props.permit === 'all') return true;
+		else return cleaned === props.permit;
+	});
+	console.log('filtered results', filteredResults)
 	return (
 		<>
 			<div className="results-filters">
@@ -48,7 +50,8 @@ const Result = (props) => {
 						<Link key={site.attributes.OBJECTID} to={`/places/${props.placeId}/sites/${site.attributes.OBJECTID}`}>
 							<div className="inner-wrapper" key={index}>
 								<div className="image-wrapper" key={index}>
-									<img className="google-image" src={`https://maps.googleapis.com/maps/api/streetview?size=400x400&location=${site.attributes.HNUM}+${site.attributes.ST_NAME}+${site.attributes.PRE_DIR}+${site.attributes.ST_TYPE}+MIAMI+FL&heading=271&pitch=-0.76&key=AIzaSyDLun1DYQxp9IawieGnpd-4d0Jrp8sZSHU`} alt="contaminated site" />
+									{/* {console.log(`https://maps.googleapis.com/maps/api/streetview?size=400x400&location=${site.attributes.HNUM}+${site.attributes.ST_NAME}+${site.attributes.PRE_DIR}+${site.attributes.ST_TYPE}+MIAMI+FL&heading=271&pitch=-0.76&key=${process.env.REACT_APP_GOOGLE_API_KEY}`)} */}
+									<img className="google-image" src={`https://maps.googleapis.com/maps/api/streetview?size=400x400&location=${site.attributes.HNUM}+${site.attributes.ST_NAME}+${site.attributes.PRE_DIR}+${site.attributes.ST_TYPE}+MIAMI+FL&heading=271&pitch=-0.76&key=${process.env.REACT_APP_GOOGLE_API_KEY}`} alt="contaminated site" />
 								</div>
 								<div className="text-wrapper">
 									<h3>Status: {site.attributes.CLASSIFCTN}</h3>

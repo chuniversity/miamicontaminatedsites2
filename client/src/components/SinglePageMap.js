@@ -17,7 +17,7 @@ export class SinglePageMap extends React.Component {
           zoom={15}
         >
           <Marker 
-            position={{ lat: Number(this.props.site.LAT), lng: Number(this.props.site.LON)}} 
+            position={{ lat: Number(this.props.geometry.y), lng: Number(this.props.geometry.x)}} 
             title={`${this.props.site.HNUM} ${this.props.site.PRE_DIR} ${this.props.site.ST_NAME} ${this.props.site.ST_TYPE}`}
           />
         </Map>

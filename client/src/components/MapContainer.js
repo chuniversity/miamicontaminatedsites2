@@ -6,16 +6,17 @@ export class MapContainer extends React.Component {
   displayMarkers = () => {
     return this.props.sites
     .filter(site => {
+      let cleaned = site.attributes.PERMITTYPE.split(' ').join(''); // fix spacing error in api
       if (this.props.permit === 'all') return true
-        else return site.attributes.PERMITTYPE === this.props.permit
+        else return cleaned === this.props.permit
       })
     .map((site, index) => {
       return (
         <Marker  
           key={index} id={index} 
           position={{
-            lat: site.attributes.LAT,
-            lng: site.attributes.LON
+            lat: site.geometry.y,
+            lng: site.geometry.x
           }}
         />
       )
