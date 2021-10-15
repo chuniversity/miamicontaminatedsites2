@@ -10,8 +10,6 @@ This started has a demo of using the Google Places API to retrieve a latitude an
 
 See <a href="http://www.miamicontaminatedsites.com/">Miami Contaminated Sites</a>
 
-This demo is heavily throttling requests per day, so it may max out during too many requests.
-
 ## Technology <a name="technology"></a>
 
 The site uses a React Front End and a simple Node server that queries the <a href="https://gis-mdc.opendata.arcgis.com/datasets/MDC::contaminated-sites/about">Miami Open Data Hub Site</a>.
