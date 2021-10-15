@@ -14,11 +14,12 @@
   box-shadow: 5px 10px 20px black;
 }
 
-.single-image {
+.single-image-wrapper {
   width: 60vw;
   height: 300px;
   object-fit: cover;
 }
+
 
 table {
   width: 100%;
@@ -31,6 +32,13 @@ table {
   border-collapse: separate;
   border-spacing: 50px 0;
 
+}
+
+.single-image-wrapper {
+  height: 100%;
+  width: 100%;
+  height: 300px;
+  background-color: #000;
 }
 
 
@@ -66,4 +74,3 @@ h1 {
 .text-wrapper h1 {
   margin: 0;
 }
-

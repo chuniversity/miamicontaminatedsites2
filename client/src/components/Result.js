@@ -7,6 +7,17 @@ const Result = (props) => {
 	if (props.permit === 'all') return true;
 		else return cleaned === props.permit;
 	});
+
+	const permitLookup = {
+		"UT" : "Storage Tanks",
+		"IW5" : "Industrial Waste",
+		"HWR" :	"Hazardous Waste Removal",
+		"SW"	: "Solid Waste",
+		"IW"	: "Industrial Waste",
+		"AW"	: "Waste",
+		"ARP"	: "Airports and Contracts"
+	}
+
 	return (
 		<>
 			<div className="results-filters">
@@ -53,7 +64,7 @@ const Result = (props) => {
 								</div>
 								<div className="text-wrapper">
 									<h3>Status: {site.attributes.CLASSIFCTN}</h3>
-									<h3>Type: {site.attributes.PERMITTYPE}</h3>
+									<h3>Type: {permitLookup[site.attributes.PERMITTYPE.split(' ').join('')]}</h3>
 									<h3>Cleanup: {site.attributes.TASK_NAME}</h3>
 									<h3>Address: {site.attributes.HNUM} {site.attributes.PRE_DIR} {site.attributes.ST_NAME} {site.attributes.ST_TYPE}</h3>
 								</div>						

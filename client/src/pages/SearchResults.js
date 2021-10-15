@@ -12,7 +12,8 @@ class SearchResults extends React.Component {
             permitText: 'All',
             filteredResults: 0,
             mapPoints: [],
-            zoom: 15
+            zoom: 15,
+            loading: true,
           }
 
   handlePermitChange = event => this.setState({
@@ -36,11 +37,19 @@ class SearchResults extends React.Component {
     .then(response => {
       const { data } = response;
       const { features } = data;
-      this.setState({ sites: features, totalResults: features.length, place })
+      console.log('pass fetchsites')
+      this.setState({ loading: false, sites: features, totalResults: features.length, place })
     })
   }
 
+  componentDidMount(){
+    console.log('pass componentdidmount')
+    const service = new window.google.maps.places.PlacesService(document.getElementById('map'))
+    service.getDetails({ placeId: this.props.match.params.placeId }, (place) => this.fetchSites(place))
+  }
+
   render(){
+
     return(
       <>
         <div style={{position: 'relative', minHeight: '400px', backgroundColor: 'azure', marginTop: '64px'}}>
@@ -63,10 +72,6 @@ class SearchResults extends React.Component {
         <div id="map"></div>
       </>
     )
-  }
-  componentDidMount(){
-    const service = new window.google.maps.places.PlacesService(document.getElementById('map'))
-    service.getDetails({ placeId: this.props.match.params.placeId }, (place) => this.fetchSites(place))
   }
 }
 export default SearchResults

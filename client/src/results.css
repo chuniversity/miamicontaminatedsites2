@@ -13,6 +13,11 @@
   box-shadow: 5px 10px 20px black;
 	box-shadow: 5px 10px 20px black;
 	max-width: 400px;
+  min-width: 300px;
+}
+
+.image-wrapper {
+  min-width: 200px;
 }
 
 .total-results {
@@ -163,7 +168,7 @@ select option:hover{
 @media only screen and (max-width: 700px) {
   .outer-wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 40px;
     padding-left: 20vw;
     padding-right: 20vw;
