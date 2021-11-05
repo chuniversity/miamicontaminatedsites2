@@ -9,7 +9,7 @@ const SearchResults = (props) => {
   const[sites, setSites] = useState([]);
   const[permit, setPermit] = useState('all');
   const[permitText, setPermitText] = useState('All');
-  const[zoom, setZoom] = useState(15);
+  // const[zoom, setZoom] = useState(15);
   const[loading, setLoading] = useState(true);
 
   const handlePermitChange = event => {
@@ -66,6 +66,9 @@ const SearchResults = (props) => {
     service.getDetails({ placeId: props.match.params.placeId }, (place) => fetchSitesCopy(place));
   }, [props.match.params.placeId, fetchSitesCopy]);
 
+    if (loading) {
+      return (<div>Loading...</div>)
+    } 
     return(
       <>
         <div style={{position: 'relative', minHeight: '400px', backgroundColor: 'azure', marginTop: '64px'}}>
@@ -75,7 +78,7 @@ const SearchResults = (props) => {
             place={place}
             sites={sites}
             permit={permit}
-            zoom={zoom}
+            zoom={15}
           />
         }
         </div>

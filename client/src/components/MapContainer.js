@@ -1,14 +1,13 @@
 import React from 'react'
 import {Map, GoogleApiWrapper, Marker} from 'google-maps-react'
  
-export class MapContainer extends React.Component {
-
-  displayMarkers = () => {
-    return this.props.sites
+const MapContainer = (props) => {
+ const displayMarkers = () => {
+    return props.sites
     .filter(site => {
       let cleaned = site.attributes.PERMITTYPE.split(' ').join(''); // fix spacing error in api
-      if (this.props.permit === 'all') return true
-        else return cleaned === this.props.permit
+      if (props.permit === 'all') return true;
+        else return cleaned === props.permit;
       })
     .map((site, index) => {
       return (
@@ -21,28 +20,24 @@ export class MapContainer extends React.Component {
         />
       )
     })
-  }
-      render() {
+  };
         return (
           <Map
-            google={this.props.google}
+            google={props.google}
             style={{width: '100%', 
                     height: '400px'
                   }}
             initialCenter={{
-              lat: this.props.place.geometry.location.lat(),
-              lng: this.props.place.geometry.location.lng()
+              lat: props.place.geometry.location.lat(),
+              lng: props.place.geometry.location.lng()
             }}
-            zoom={this.props.zoom}
+            zoom={props.zoom}
           >
-          {this.displayMarkers()}
+          {displayMarkers()}
           </Map>
         );
-    }
-  }
+  };
 
-  
- 
 export default GoogleApiWrapper({
   apiKey: (process.env.REACT_APP_GOOGLE_API_KEY)
-})(MapContainer)
+})(MapContainer);
