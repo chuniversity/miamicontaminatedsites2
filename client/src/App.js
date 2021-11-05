@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
-import './App.css'
-import './index.css'
-import './results.css'
-import './singleResult.css'
+import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import './App.css';
+import './index.css';
+import './results.css';
+import './singleResult.css';
 import './home.css'
 import Home from './pages/Home'
 import SingleResult from './pages/SingleResult'
@@ -11,8 +11,7 @@ import Map from './pages/Map'
 import Navbar from './components/Navbar'
 import SearchResults from './pages/SearchResults'
 
-class App extends Component {
-  render() {
+const App = () => {
     return (
       <BrowserRouter>
       <Navbar/>
@@ -24,7 +23,6 @@ class App extends Component {
       </Switch>
     </BrowserRouter>
     )
-  }
 }
 
 export default App

@@ -3,7 +3,6 @@ import Autocomplete from 'react-google-autocomplete';
 
 const Home = props => {
 	const goToSearchResultsForPlace = place => place.place_id && props.history.push(`/places/${place.place_id}`)
-  
 	return(
     <div className="v-header container">
     <div className="fullscreen-video-wrap">
